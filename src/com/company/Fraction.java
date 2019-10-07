@@ -2,7 +2,7 @@
 public class Fraction {
 	private int numerator;		//attributes
 	private int denominator;
-	
+	//
 	// constructor
 	public Fraction(int n, int d)	// constructor
 	{
