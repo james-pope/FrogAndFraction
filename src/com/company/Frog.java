@@ -50,7 +50,7 @@ public class Frog {
 		other.getXPos();
 		other.getYPos();
 		Frog.xPos = other.xPos;
-		Frog.yPos = other.YPos;
+		Frog.yPos = other.yPos;
 	}
 	//TODO visit method moves frog to the location of the friend frog
 	// This method will take an argument of type Frog.  It will find the position of the
