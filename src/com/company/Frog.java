@@ -36,10 +36,17 @@ public class Frog {
 	{
 		yPos=yPos+1;
 	}
+	public void jump(int NumSpaces){
+		xPos += NumSpaces;
+		yPos += NumSpaces;
+	}
 	//TODO jump method move up and to the right
 	//This method should take an integer argument.  This argument controls how many spaces
 	// the frog will move both up and right.  Returns no value.
-	
+
+	public void visit(){
+		
+	}
 	//TODO visit method moves frog to the location of the friend frog
 	// This method will take an argument of type Frog.  It will find the position of the
 	// frog and move to this position.
