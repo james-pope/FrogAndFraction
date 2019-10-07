@@ -37,8 +37,8 @@ public class Frog {
 		yPos=yPos+1;
 	}
 	public void jump(int NumSpaces){
-		xPos += NumSpaces;
-		yPos += NumSpaces;
+		xPos += NumSpaces;              // x position changes based on value of NumSpaces
+		yPos += NumSpaces;		// y position changes based on value of NumSpaces
 	}
 	//TODO jump method move up and to the right
 	//This method should take an integer argument.  This argument controls how many spaces
@@ -84,7 +84,7 @@ public class Frog {
 		
 		// make a new frog named Frank.  have him jump twice and then go visit Freddy.
 		/*
-		Frog f3 = new Frog("Frank",2,6);
+		Frog f3 = new Frog("Frank",2,6);		//creates an instance of frog for freddy
 		f3.jump(2);
 		System.out.println(f3);
 		f3.visit(f1);
