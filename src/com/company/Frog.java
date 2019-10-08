@@ -3,7 +3,7 @@ public class Frog {
 	private String name;
 	private int xPos;
 	private int yPos;
-	
+
 	public Frog(String n,int x, int y)		// constructor
 	{
 		name = n;
@@ -36,21 +36,15 @@ public class Frog {
 	{
 		yPos=yPos+1;
 	}
-	public void jump(int NumSpaces){
-		xPos += NumSpaces;              // x position changes based on value of NumSpaces
-		yPos += NumSpaces;		// y position changes based on value of NumSpaces
+	public void jump(int NumSpaces){		//frog will jump based on input
+		xPos += NumSpaces;
+		yPos += NumSpaces;
 	}
-	//TODO jump method move up and to the right
-	//This method should take an integer argument.  This argument controls how many spaces
-	// the frog will move both up and right.  Returns no value.
 
-	public void visit(Frog other){
-		Frog.getXPos();
-		Frog.getYPos();
-		other.getXPos();
-		other.getYPos();
-		Frog.xPos = other.xPos;
-		Frog.yPos = other.yPos;
+	public Frog visit(Frog friend){			//changes coordinates of frog to the friends coordinates
+		this.xPos = friend.xPos;
+		this.yPos = friend.yPos;
+		return friend;
 	}
 	//TODO visit method moves frog to the location of the friend frog
 	// This method will take an argument of type Frog.  It will find the position of the
@@ -68,28 +62,24 @@ public class Frog {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Frog f1 = new Frog("Freddy",3,4);	// create an instance of Frog
 		f1.eatFly();						// call Frog methods
 		f1.moveNorth();
 		System.out.println(f1);
 		
-		Frog f2 = new Frog("Francine", -2,0);
+		Frog f2 = new Frog("Francine", -2,0);		//creates new frog
 		f2.eatFly();
-		// TODO uncomment these to test new code.
-		//f2.jump(2);
-		//f1.visit(f2);
+		f2.jump(2);
+		f1.visit(f2);
 		System.out.println(f1);
 		System.out.println(f2);
-		
-		// make a new frog named Frank.  have him jump twice and then go visit Freddy.
-		/*
-		Frog f3 = new Frog("Frank",2,6);		//creates an instance of frog for freddy
+
+		Frog f3 = new Frog("Frank",2,6);		//creates an instance of frog "Frank"
 		f3.jump(2);
 		System.out.println(f3);
 		f3.visit(f1);
 		System.out.println(f3);
-		*/
+
 	}
 
 }
@@ -102,4 +92,7 @@ Francine
 Yum
 Hi I am Freddy the frog and I live at 0 2
 Hi I am Francine the frog and I live at 0 2
+Frank
+Hi I am Frank the frog and I live at 4 8
+Hi I am Frank the frog and I live at 0 2
 */
