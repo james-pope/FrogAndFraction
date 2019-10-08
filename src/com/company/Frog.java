@@ -1,4 +1,3 @@
-
 public class Frog {
 	private String name;
 	private int xPos;
@@ -46,10 +45,6 @@ public class Frog {
 		this.yPos = friend.yPos;
 		return friend;
 	}
-	//TODO visit method moves frog to the location of the friend frog
-	// This method will take an argument of type Frog.  It will find the position of the
-	// frog and move to this position.
-	
 	public void eatFly()
 	{
 		System.out.println("Yum");
